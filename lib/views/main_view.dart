@@ -18,15 +18,14 @@ class MainView extends StatelessWidget {
         builder: (BuildContext context, state) {
           if (state.status == CardStatus.initial) {
             return FadeIn(
-                delay: const Duration(milliseconds: 500),
                 child: MyCard(
-                  path: state.path,
-                  onTap: () {
-                    context.read<CardBloc>().add(OnFlipEvent(
-                        path: CardNames.obtenerPathAleatorio(),
-                        status: CardStatus.flip));
-                  },
-                ));
+              path: state.path,
+              onTap: () {
+                context.read<CardBloc>().add(OnFlipEvent(
+                    path: CardNames.obtenerPathAleatorio(),
+                    status: CardStatus.flip));
+              },
+            ));
           }
           return FlipInY(child: MyCard(path: state.path));
         },

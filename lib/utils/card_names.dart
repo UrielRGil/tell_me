@@ -73,6 +73,6 @@ class CardNames {
   ];
 
   static String obtenerPathAleatorio() {
-    return cards[Random().nextInt(cards.length) + 2];
+    return cards[Random().nextInt(cards.length) + 1];
   }
 }
