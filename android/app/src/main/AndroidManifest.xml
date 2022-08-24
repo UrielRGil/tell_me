@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tell_me">
+    package="com.cuceimovile.tell_me">
    <application
         android:label="Tell me"
         android:name="${applicationName}"
