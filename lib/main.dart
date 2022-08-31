@@ -1,4 +1,4 @@
-import 'package:fluent_ui/fluent_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:tell_me/screens/screens.dart';
 
 void main() => runApp(MyApp());
@@ -6,7 +6,7 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return FluentApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       initialRoute: 'home',

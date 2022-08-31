@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:fluent_ui/fluent_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:tell_me/views/main_view.dart';
 import 'package:tell_me/widgets/card.dart';
 
@@ -12,8 +12,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
-    return ScaffoldPage(
-      content: FutureBuilder(
+    return Scaffold(
+      body: FutureBuilder(
           builder: (context, AsyncSnapshot<bool> snapshot) {
             if (!snapshot.hasData) {
               return FlipInY(
