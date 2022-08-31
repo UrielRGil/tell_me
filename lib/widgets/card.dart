@@ -14,7 +14,10 @@ class MyCard extends StatelessWidget {
       child: SizedBox(
           width: size.width,
           height: size.height,
-          child: Image(image: AssetImage('assets/cards/$path'))),
+          child: Image(
+            image: AssetImage('assets/cards/$path'),
+            fit: BoxFit.contain,
+          )),
     );
   }
 }

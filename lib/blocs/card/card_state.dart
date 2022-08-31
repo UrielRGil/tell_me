@@ -4,13 +4,14 @@ enum CardStatus { initial, flip, error }
 
 class CardState extends Equatable {
   final CardStatus status;
-  final String path;
+  final int currentIndex;
 
-  const CardState({required this.status, required this.path});
+  const CardState({required this.status, required this.currentIndex});
 
-  CardState copyWith({String? path, CardStatus? status}) =>
-      CardState(status: status ?? this.status, path: path ?? this.path);
+  CardState copyWith({int? currentIndex, CardStatus? status}) => CardState(
+      status: status ?? this.status,
+      currentIndex: currentIndex ?? this.currentIndex);
 
   @override
-  List<Object> get props => [status, path];
+  List<Object> get props => [status, currentIndex];
 }
